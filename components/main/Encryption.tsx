@@ -70,7 +70,7 @@ const Encryption = ({ themed }: Props) => {
             themed === "light" ? "text-gray-800" : "text-gray-300"
           }`}
         >
-          Secure your data with end-to-end encryption
+          Best practices in data security and performance
         </div>
       </div>
 
