@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
         <a
           href="#about-me"
-          className="hidden sm:flex h-auto w-auto flex-row items-center"
+          className="absolute left-0 sm:relative sm:flex h-auto w-auto flex-row items-center"
         >
           <Image
             src={themed === "light" ? "/NavLogo2.png" : "/NavLogo.png"}
@@ -28,7 +28,7 @@ const Navbar = () => {
           />
 
           <span
-            className={`font-bold ml-[10px] hidden md:block ${
+            className={`font-bold ml-[10px] hidden sm:block text-base ${
               themed === "light" ? "text-gray-600" : "text-gray-300"
             }`}
           >
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-15 h-12">
+        <div className="absolute right-5 sm:relative sm:right-0 flex flex-row gap-15 h-12">
           <motion.button onClick={teste} className="relative w-12 h-12">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,11 +114,12 @@ const Navbar = () => {
 
           <motion.button onClick={teste} className="relative w-15 h-12">
             <span
-              className={
-                themed === "light"
-                  ? "text-gray-600 hover:text-orange-500 "
-                  : "text-gray-300 hover:text-violet-500"
-              }
+              className={`
+                ${
+                  themed === "light"
+                    ? "text-gray-600 hover:text-orange-500 "
+                    : "text-gray-300 hover:text-violet-500"
+                } text-xs sm:text-base`}
             >
               {themed === "dark" ? "Dark Mode" : "Light Mode"}
             </span>
