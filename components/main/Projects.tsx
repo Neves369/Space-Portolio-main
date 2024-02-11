@@ -33,7 +33,7 @@ const Projects = ({ themed }: Props) => {
             themed={themed}
             link="https://portifoliodouglas.netlify.app/"
             src="/portfolio-game.png"
-            title="Gaming Portfolio"
+            title="Gamefield Portfolio"
             description="My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
           />
           <ProjectCard

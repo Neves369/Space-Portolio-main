@@ -6,7 +6,6 @@ import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 import ThemeContext from "@/context/theme";
 import { useContext } from "react";
-import Image from "next/image";
 
 export default function Home() {
   const { themed } = useContext(ThemeContext);

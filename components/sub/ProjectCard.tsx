@@ -17,7 +17,7 @@ const ProjectCard = ({ themed, link, src, title, description }: Props) => {
       className={`hover:mt-[-30px] relative overflow-hidden rounded-lg shadow-lg border ${
         themed === "light"
           ? "border-[#ff6501] hover:bg-orange-300"
-          : "border-[#2A0E61] hover:bg-sky-700"
+          : "border-[#2A0E61] hover:bg-violet-700"
       } cursor-pointer`}
     >
       <Image
