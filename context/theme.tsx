@@ -15,10 +15,13 @@ export const ThemeProvider: any = ({ children }: any) => {
     function loadStorageData() {
       const storageTheme = sessionStorage.getItem("theme");
       if (storageTheme) {
+        JSON.parse(storageTheme) === "light"
+          ? (document.body.style.backgroundColor = "rgb(250 250 250 / 0)")
+          : (document.body.style.backgroundColor = "rgb(3 0 20 / 1)");
         setThemed(JSON.parse(storageTheme));
       }
     }
-    // loadStorageData();
+    loadStorageData();
   }, []);
 
   function changeTheme(theme: any) {
