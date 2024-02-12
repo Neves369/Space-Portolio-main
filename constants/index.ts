@@ -443,16 +443,19 @@ export const All_skill = [
     {
       name: "Instagram",
       src: "/instagram.svg",
+      src2: "/instagram2.svg",
       link: "https://www.instagram.com/dneves.369"
     },
     {
       name: "Facebook",
       src: "/facebook.svg",
+      src2: "/facebook2.svg",
       link: "https://www.facebook.com/douglas.brian.904/"
     },
     {
       name: "Discord",
       src: "/discord.svg",
+      src2: "/discord.svg",
       link: "https://www.instagram.com/dneves.369"
     },
   ];

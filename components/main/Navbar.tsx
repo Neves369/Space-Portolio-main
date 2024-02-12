@@ -135,7 +135,7 @@ const Navbar = () => {
               className="hidden sm:block"
             >
               <Image
-                src={social.src}
+                src={themed === "dark" ? social.src : social.src2}
                 alt={social.name}
                 key={social.name}
                 width={24}

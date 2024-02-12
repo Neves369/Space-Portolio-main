@@ -95,6 +95,52 @@
   display: none;
 }
 
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  height: 200px; /* Ajuste o tamanho conforme necessário */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,0,1) 0%, rgba(255,255,0,0) 60%);
+  overflow: hidden;
+}
+
+.rays {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 400px; /* Ajuste o tamanho conforme necessário */
+  height: 400px; /* Ajuste o tamanho conforme necessário */
+  background: radial-gradient(circle, rgba(255,255,0,1) 0%, rgba(255,255,0,0) 60%);
+  /* transform: translate(-50%, -50%); */
+  animation: rays-animation 5s infinite linear; /* Adiciona animação de rotação */
+}
+
+.black-hole {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 400px; /* Ajuste a largura conforme necessário */
+  height: 400px; /* Ajuste a altura conforme necessário */
+  background: radial-gradient(circle, rgba(255, 116, 47, 0.824) 0%, rgba(255,255,0,0) 60%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: rays-animation 5s infinite linear;
+}
+
+@keyframes rays-animation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
 
 
 html {
