@@ -59,7 +59,7 @@ const Projects = ({ themed }: Props) => {
             link="https://portscanner.netlify.app/"
             src="/port-scan.png"
             title="Port Scanner"
-            description="My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
+            description="The app's minimalistic interface belies its intricate functionality. It begins by gathering network information, scanning IPs and ports within the subnet. It then alerts the user about IPs responding to requests or with open connections on specified ports. This is achieved using tools such as `react-native-network-info` for network data, `get-subnet-mask` for IP range calculation, `shift8-ip-func` for IP conversion, `ipaddr.js` for IPv6 and IPv4 calculations, and `react-native-tcp-socket` for making requests."
           />
           <ProjectCard
             themed={themed}
