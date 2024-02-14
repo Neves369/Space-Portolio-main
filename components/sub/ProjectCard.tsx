@@ -37,9 +37,9 @@ const ProjectCard = ({ themed, link, src, title, description }: Props) => {
           {title}
         </h1>
         <p
-          className={`mt-2 ${
+          className={`mt-2 line-clamp-3 hover:line-clamp-none ${
             themed === "light" ? "text-gray-600" : "text-gray-300"
-          } line-clamp-3`}
+          } `}
         >
           {description}
         </p>

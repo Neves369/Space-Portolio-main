@@ -88,14 +88,14 @@ const HeroContent = () => {
             themed == "light" ? "text-gray-700" : "text-gray-400"
           } my-5 max-w-[600px] text-start`}
         >
-          I have a degree in Computer Science, and I specialize in mobile
-          development with React Native, where I seek to create efficient and
-          innovative applications. I bring a solid understanding of programming
-          fundamentals and practical experience in web and mobile development.
-          On the backend, I prefer to work with Node.js, creating robust APIs to
-          support application functionality. I am always looking for exciting
-          challenges and learning opportunities, ready to collaborate on
-          innovative projects and contribute to talented teams.
+          I have a Bachelor&apos;s degree in Computer Science, and I specialize
+          in mobile development with React Native, where I seek to create
+          efficient and innovative applications. I bring a solid understanding
+          of programming fundamentals and practical experience in web and mobile
+          development. On the backend, I prefer to work with Node.js, creating
+          robust APIs to support application functionality. I am always looking
+          for exciting challenges and learning opportunities, ready to
+          collaborate on innovative projects and contribute to talented teams.
         </motion.p>
         <motion.a
           target="_blank"
