@@ -24,6 +24,13 @@ const Projects = ({ themed }: Props) => {
         <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
           <ProjectCard
             themed={themed}
+            link="https://ecommerce-k3a9.vercel.app/"
+            src="/ecommerce.png"
+            title="Hokusai Ecommerce"
+            description="The e-commerce application  include modern design and animations, the ability to add and edit products on the go using a Sanity, all advanced cart, and checkout functionalities, and most importantly, the complete integration with Stripe so that you can cover real payments."
+          />
+          <ProjectCard
+            themed={themed}
             link="https://divine-speakers.netlify.app/"
             src="/divspeak.png"
             title="Divine Speakers"
