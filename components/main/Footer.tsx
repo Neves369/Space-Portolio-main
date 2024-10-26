@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   RxDiscordLogo,
   RxGithubLogo,
@@ -94,4 +94,4 @@ const Footer = ({ themed }: Props) => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

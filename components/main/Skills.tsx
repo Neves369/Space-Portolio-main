@@ -7,7 +7,7 @@ import {
   Mobile_skill,
   Other_skill,
 } from "@/constants";
-import React from "react";
+import React, { Suspense } from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
 
@@ -106,17 +106,19 @@ const Skills = ({ themed }: Props) => {
 
       <div className="w-full h-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-auto"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src={
-              themed === "light" ? "/cards-video2.webm" : "/cards-video.webm"
-            }
-          />
+          <Suspense fallback={<div>Carregando vídeo...</div>}>
+            <video
+              className="w-full h-auto"
+              preload="false"
+              playsInline
+              loop
+              muted
+              autoPlay
+              src={
+                themed === "light" ? "/cards-video2.webm" : "/cards-video.webm"
+              }
+            />
+          </Suspense>
         </div>
       </div>
     </section>

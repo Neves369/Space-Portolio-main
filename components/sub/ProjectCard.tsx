@@ -14,7 +14,7 @@ const ProjectCard = ({ themed, link, src, title, description }: Props) => {
     <a
       href={link}
       target="_blank"
-      className={`hover:mt-[-30px] relative overflow-hidden rounded-lg shadow-lg border ${
+      className={`relative overflow-hidden rounded-lg shadow-lg border ${
         themed === "light"
           ? "border-[#ff6501] hover:bg-orange-300"
           : "border-[#2A0E61] hover:bg-violet-700"
@@ -37,7 +37,7 @@ const ProjectCard = ({ themed, link, src, title, description }: Props) => {
           {title}
         </h1>
         <p
-          className={`mt-2 line-clamp-3 hover:line-clamp-none ${
+          className={`mt-2 line-clamp-3 ${
             themed === "light" ? "text-gray-600" : "text-gray-300"
           } `}
         >

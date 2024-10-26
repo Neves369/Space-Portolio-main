@@ -3,7 +3,7 @@ import { Socials } from "@/constants";
 import ThemeContext from "@/context/theme";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 
 const Navbar = () => {
   const { themed, changeTheme } = useContext(ThemeContext);
@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-100 px-10 z-50">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
         <a
-          href="#about-me"
+          href="/"
           className="absolute left-0 sm:relative sm:flex h-auto w-auto flex-row items-center"
         >
           <Image
@@ -45,7 +45,7 @@ const Navbar = () => {
             }`}
           >
             <a
-              href="#about-me"
+              href="/aboutme"
               className={`${
                 themed === "light"
                   ? "hover:text-orange-500"
@@ -149,4 +149,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ProjectCard from "../sub/ProjectCard";
+import { slideInFromLeft } from "@/utils/motion";
 
 interface Props {
   themed: string;
@@ -24,6 +26,45 @@ const Projects = ({ themed }: Props) => {
         <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
           <ProjectCard
             themed={themed}
+            link="https://mania-de-moda.vercel.app/"
+            src="/mania-moda.png"
+            title="Mania de Moda"
+            description="Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp."
+          />
+          <ProjectCard
+            themed={themed}
+            link="https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US"
+            src="/esperancinha.png"
+            title="Clube Esperancinha"
+            description="Clube Esperancinha was the biggest project I've ever worked on. The points club system has an app with a store for exchanging gifts, activating promotions, notifications, controlling expenses and checkout. In addition to a web page for managing the app and an auxiliary app for the waiter."
+          />
+          <ProjectCard
+            themed={themed}
+            link="https://divine-speakers.netlify.app/"
+            src="/divspeak.png"
+            title="Divine Speakers"
+            description="A vast library developed with React Native and Firebase, featuring several books, theological sermons, personalities and events that marked the history of the church."
+          />
+          <ProjectCard
+            themed={themed}
+            link="https://portifoliodouglas.netlify.app/"
+            src="/portfolio-game.png"
+            title="Gamefield Portfolio"
+            description="My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
+          />
+        </div>
+        {/* <br />
+        <br />
+        <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+          <ProjectCard
+            themed={themed}
+            link="https://senhorita.vercel.app/"
+            src="/senhorita.png"
+            title="Senhorita"
+            description="Senhorita is a women's clothing store located in the city of Teresópolis, Rio de Janeiro - Brazil. The website serves as a virtual showcase and sales are closed via WhatsApp"
+          />
+          <ProjectCard
+            themed={themed}
             link="https://ecommerce-k3a9.vercel.app/"
             src="/ecommerce.png"
             title="Hokusai Ecommerce"
@@ -42,13 +83,6 @@ const Projects = ({ themed }: Props) => {
             src="/portfolio-game.png"
             title="Gamefield Portfolio"
             description="My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
-          />
-          <ProjectCard
-            themed={themed}
-            link="https://litterae.netlify.app/"
-            src="/litterae.png"
-            title="Litterae"
-            description="Litterae is a template for a free ebook reading application, with most of the features that Google Books has, but it aims to make a vast collection of public domain works available. It was used in the React Native project on the front and back node.js, mongoDB and AWS."
           />
         </div>
         <br />
@@ -75,6 +109,25 @@ const Projects = ({ themed }: Props) => {
             title="Vacation Management System"
             description="Vacation management system developed in React CLI, using: Emotion, Material UI, Fullcalendar, Formik and Yup."
           />
+          <ProjectCard
+            themed={themed}
+            link="https://litterae.netlify.app/"
+            src="/litterae.png"
+            title="Litterae"
+            description="Litterae is a template for a free ebook reading application, with most of the features that Google Books has, but it aims to make a vast collection of public domain works available. It was used in the React Native project on the front and back node.js, mongoDB and AWS."
+          />
+        </div> */}
+
+        <div className=" flex justify-center mt-5">
+          <motion.a
+            href="/aboutMe"
+            variants={slideInFromLeft(1)}
+            className={`py-2 ${
+              themed === "light" ? "button-primary-light" : "button-primary"
+            } text-center text-white cursor-pointer rounded-lg min-w-[200px] max-w-[200px]`}
+          >
+            More Projects
+          </motion.a>
         </div>
       </div>
     </div>

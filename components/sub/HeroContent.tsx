@@ -14,10 +14,6 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 const HeroContent = () => {
   const { themed } = useContext(ThemeContext);
 
-  const abrirPDF = () => {
-    window.open("/caminho/para/seu/arquivo.pdf", "_blank");
-  };
-
   return (
     <motion.div
       initial="hidden"
@@ -98,8 +94,8 @@ const HeroContent = () => {
           collaborate on innovative projects and contribute to talented teams.
         </motion.p>
         <motion.a
-          target="_blank"
-          href="https://www.linkedin.com/in/douglas-neves-3946b51a0/"
+          // target="_blank"
+          href="/aboutme"
           variants={slideInFromLeft(1)}
           className={`py-2 ${
             themed === "light" ? "button-primary-light" : "button-primary"

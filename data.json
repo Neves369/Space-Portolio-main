@@ -1,0 +1,18 @@
+{
+    "projetos": [
+        {
+            "title": "Mania de Moda",
+            "src": "/mania-moda.png",
+            "description": "Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp.",
+            "tags": ["fashion", "e-commerce", "whatsapp", "react", "next"],
+            "link": "https://mania-de-moda.vercel.app/"
+        },
+        {
+            "title": "Mania de Moda",
+            "src": "/mania-moda.png",
+            "description": "Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp.",
+            "tags": ["fashion", "e-commerce", "whatsapp", "react", "next"],
+            "link": "https://mania-de-moda.vercel.app/"
+        }
+    ]
+}
