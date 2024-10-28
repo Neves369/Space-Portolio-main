@@ -158,8 +158,8 @@ const Hero = () => {
           Node.js (often with Nest.js), using React (Next.js or Vite) for the
           frontend, and React Native for mobile apps, always aiming to optimize
           the user experience. I am also passionate about IoT and robotics,
-          which led me to develop my final project on "System for Monitoring IoT
-          Devices in a Residential Environment Using ROS."
+          which led me to develop my final project on System for Monitoring IoT
+          Devices in a Residential Environment Using ROS.
         </motion.p>
 
         <motion.p
