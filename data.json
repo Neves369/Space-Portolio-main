@@ -8,11 +8,25 @@
             "link": "https://mania-de-moda.vercel.app/"
         },
         {
-            "title": "Mania de Moda",
-            "src": "/mania-moda.png",
-            "description": "Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp.",
-            "tags": ["fashion", "e-commerce", "whatsapp", "react", "next"],
-            "link": "https://mania-de-moda.vercel.app/"
+            "title": "Clube Esperancinha",
+            "src": "/esperancinha.png",
+            "description": "Clube Esperancinha was the biggest project I've ever worked on. The points club system has an app with a store for exchanging gifts, activating promotions, notifications, controlling expenses and checkout. In addition to a web page for managing the app and an auxiliary app for the waiter.",
+            "tags": ["rewards", "cashback", "react native", "mobile"],
+            "link": "https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US"
+        },
+        {
+            "title": "Divine Speakers",
+            "src": "/divspeak.png",
+            "description": "A vast library developed with React Native and Firebase, featuring several books, theological sermons, personalities and events that marked the history of the church.",
+            "tags": ["youtube view", "ads", "pdf", "react native", "mobile"],
+            "link": "https://divine-speakers.netlify.app/"
+        },
+        {
+            "title": "Gamefield Portfolio",
+            "src": "/portfolio-game.png",
+            "description": "My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development.",
+            "link": "https://portifoliodouglas.netlify.app/"
         }
+
     ]
 }
