@@ -65,7 +65,7 @@ const Navbar = () => {
               Skills
             </a>
             <a
-              href="#projects"
+              href="/projects"
               className={`${
                 themed === "light"
                   ? "hover:text-orange-500"

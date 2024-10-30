@@ -120,7 +120,7 @@ const Hero = () => {
         <div className="w-full h-full flex justify-center items-center">
           <Image
             className="hidden sm:block"
-            src={themed === "light" ? "/euWhite.png" : "/eu.png"}
+            src={themed === "light" ? "/euWhite.webp" : "/eu.webp"}
             alt="work icons"
             height={650}
             width={650}

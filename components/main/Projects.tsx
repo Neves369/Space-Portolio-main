@@ -120,7 +120,7 @@ const Projects = ({ themed }: Props) => {
 
         <div className=" flex justify-center mt-5">
           <motion.a
-            href="/aboutMe"
+            href="/projects"
             variants={slideInFromLeft(1)}
             className={`py-2 ${
               themed === "light" ? "button-primary-light" : "button-primary"
