@@ -130,6 +130,10 @@
   animation: rays-animation 5s infinite linear;
 }
 
+.filters {
+  z-index: 1000;
+}
+
 @keyframes rays-animation {
   from {
     transform: translate(-50%, -50%) rotate(0deg);

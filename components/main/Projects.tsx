@@ -27,21 +27,21 @@ const Projects = ({ themed }: Props) => {
           <ProjectCard
             themed={themed}
             link="https://mania-de-moda.vercel.app/"
-            src="/mania-moda.png"
+            src="/mania-moda.webp"
             title="Mania de Moda"
             description="Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp."
           />
           <ProjectCard
             themed={themed}
             link="https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US"
-            src="/esperancinha.png"
+            src="/esperancinha.webp"
             title="Clube Esperancinha"
             description="Clube Esperancinha was the biggest project I've ever worked on. The points club system has an app with a store for exchanging gifts, activating promotions, notifications, controlling expenses and checkout. In addition to a web page for managing the app and an auxiliary app for the waiter."
           />
           <ProjectCard
             themed={themed}
             link="https://divine-speakers.netlify.app/"
-            src="/divspeak.png"
+            src="/divspeak.webp"
             title="Divine Speakers"
             description="A vast library developed with React Native and Firebase, featuring several books, theological sermons, personalities and events that marked the history of the church."
           />

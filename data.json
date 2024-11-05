@@ -1,95 +1,144 @@
 {
   "projetos": [
-    {
-      "link": "https://play.google.com/store/apps/details?id=br.com.dneves369.brApp",
-      "src": "/braulioerosa.png",
-      "title": "Bráulio e Rosa",
-      "description":
-        "The Mercado Bráulio e Rosa system consists of a react native application, where users can consult products, simulate the price of their purchase, use the barcode reader to consult the price of the product, and stay up to date with all market promotions. One of the client's requirements was that the app only worked within the market, so I placed a geolocation limitation within a radius of 500 meters around the market. The project also has a web system for managing the application (made in Next js) and an api developed in Nestjs, these hosted on my own servers using pm2 and ngix. The app is available on Google Playstore."
-    },
-    {
-      "link": "https://iect-biblioteca.vercel.app/",
-      "src": "/bibliotecaiect.png",
-      "title": "Biblioteca IECT",
-      "description":
-        "A web system developed to manage book loans from the First Congregational Church of Teresópolis, it is possible to register new books and users, list them, register and close a loan, it is also possible to generate reports on all library data, the system it was developed in Vitejs and uses supabase as a database and for authentication."
-    },
-    {
-      "link": "",
-      "src": "/avozdesapucaia.webp",
-      "title": "A Voz de Sapucaia",
-      "description":
-        "It was a conceptual app I worked on. The app was created by a candidate from the municipality of Sapucaia RJ, and the idea was to have all the municipality's information centered on a single channel. The most interesting feature of this project is the reading and formatting of the minutes of the city council sessions done by AI, that is, through AI the system knew who had missed the session and what each councilor did in that session."
-    },
-    {
-      "link": "https://mania-de-moda.vercel.app/",
-      "src": "/mania-moda.webp",
-      "title": "Mania de Moda",
-      "description":
-        "Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp."
-    },
-    {
-      "link": "https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US",
-      "src": "/esperancinha.webp",
-      "title": "Clube Esperancinha",
-      "description":
-        "Clube Esperancinha was the biggest project I've ever worked on. The points club system has an app with a store for exchanging gifts, activating promotions, notifications, controlling expenses and checkout. In addition to a web page for managing the app and an auxiliary app for the waiter."
-    },
-    {
-      "link": "https://divine-speakers.netlify.app/",
-      "src": "/divspeak.webp",
-      "title": "Divine Speakers",
-      "description":
-        "A vast library developed with React Native and Firebase, featuring several books, theological sermons, personalities and events that marked the history of the church."
-    },
-    {
-      "link": "https://senhorita.vercel.app/",
-      "src": "/senhorita.png",
-      "title": "Senhorita",
-      "description":
-        "Senhorita is a women's clothing store located in the city of Teresópolis, Rio de Janeiro - Brazil. The website serves as a virtual showcase and sales are closed via WhatsApp."
-    },
-    {
-      "link": "https://ecommerce-k3a9.vercel.app/",
-      "src": "/ecommerce.webp",
-      "title": "Hokusai Ecommerce",
-      "description":
-        "The e-commerce application includes modern design and animations, the ability to add and edit products on the go using a Sanity, all advanced cart, and checkout functionalities, and most importantly, the complete integration with Stripe so that you can cover real payments."
-    },
-    {
-      "link": "https://comparadorgenoma.netlify.app/",
-      "src": "/genoma.webp",
-      "title": "Genome Comparator",
-      "description":
-        "Algorithm in Python that receives two chains of nitrogenous bases, assembles the nucleotides and generates a visual comparison between them. The algorithm uses matplot to generate the comparative graph, and inquirer for user interaction."
-    },
-    {
-      "link": "",
-      "src": "/ferias.webp",
-      "title": "Vacation Management System",
-      "description":
-        "Vacation management system developed in React CLI, using: Emotion, Material UI, Fullcalendar, Formik and Yup."
-    },
-    {
-      "link": "https://litterae.netlify.app/",
-      "src": "/litterae.png",
-      "title": "Litterae",
-      "description":
-        "Litterae is a template for a free ebook reading application, with most of the features that Google Books has, but it aims to make a vast collection of public domain works available. It was used in the React Native project on the front and back node.js, mongoDB and AWS."
-    },
-    {
-      "link": "https://portifoliodouglas.netlify.app/",
-      "src": "/portfolio-game.png",
-      "title": "Gamefield Portfolio",
-      "description":
-        "My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
-    },
-    {
-      "link": "https://medium.com/@douglasbrian2011/web-scraping-com-python-424aaaefa1ca",
-      "src": "/webscraping.png",
-      "title": "Web Scraping",
-      "description":
-        "An introduction to web scraping using python. from accessing a page to automatically extracting and organizing data. With these techniques, you can explore many other websites and online data, creating useful and practical projects for your portfolio."
-    }
+      {
+        "link": "https://play.google.com/store/apps/details?id=br.com.dneves369.brApp",
+        "src": "/braulioerosa.png",
+        "title": "Bráulio e Rosa",
+        "description":
+          "The Mercado Bráulio e Rosa system consists of a react native application...",
+        "tags": ["app", "ecommerce", "geolocation", "React Native", "Nestjs", "Next.js"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://iect-biblioteca.vercel.app/",
+        "src": "/bibliotecaiect.png",
+        "title": "Biblioteca IECT",
+        "description":
+          "A web system developed to manage book loans...",
+        "tags": ["web", "library", "Vite", "Supabase", "authentication", "React"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "",
+        "src": "/avozdesapucaia.webp",
+        "title": "A Voz de Sapucaia",
+        "description":
+          "It was a conceptual app...",
+        "tags": ["concept", "information", "AI", "transcription", "city council", "data", "Firebase"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://mania-de-moda.vercel.app/",
+        "src": "/mania-moda.webp",
+        "title": "Mania de Moda",
+        "description":
+          "Mania de Moda is an online clothing store...",
+        "tags": ["ecommerce", "fashion", "virtual showcase", "WhatsApp sales", "Sanity", "Stripe", "React"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US",
+        "src": "/esperancinha.webp",
+        "title": "Clube Esperancinha",
+        "description":
+          "Clube Esperancinha was the biggest project...",
+        "tags": ["app", "points system", "notifications", "React Native", "management"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://divine-speakers.netlify.app/",
+        "src": "/divspeak.webp",
+        "title": "Divine Speakers",
+        "description":
+          "A vast library developed with React Native and Firebase...",
+        "tags": ["app", "library", "React Native", "Firebase", "theology"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://senhorita.vercel.app/",
+        "src": "/senhorita.png",
+        "title": "Senhorita",
+        "description":
+          "Senhorita is a women's clothing store...",
+        "tags": ["ecommerce", "women's fashion", "virtual showcase", "WhatsApp sales", "Sanity", "Stripe", "React"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://ecommerce-k3a9.vercel.app/",
+        "src": "/ecommerce.webp",
+        "title": "Hokusai Ecommerce",
+        "description":
+          "The e-commerce application includes modern design and animations...",
+        "tags": ["ecommerce", "Stripe", "Sanity", "React", "cart", "checkout"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://comparadorgenoma.netlify.app/",
+        "src": "/genoma.webp",
+        "title": "Genome Comparator",
+        "description":
+          "Algorithm in Python that receives two chains of nitrogenous bases...",
+        "tags": ["algorithm", "genetics", "Python", "matplotlib", "inquirer", "data"],
+        "technology": "Python"
+      },
+      {
+        "link": "",
+        "src": "/ferias.webp",
+        "title": "Vacation Management System",
+        "description":
+          "Vacation management system developed in React CLI...",
+        "tags": ["vacation management", "React", "UI", "Emotion", "Material UI", "Fullcalendar", "Formik", "Yup"],
+        "technology": "Javascript"
+
+      },
+      {
+        "link": "https://litterae.netlify.app/",
+        "src": "/litterae.png",
+        "title": "Litterae",
+        "description":
+          "Litterae is a template for a free ebook reading application...",
+        "tags": ["app", "books", "React Native", "MongoDB", "AWS"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://portifoliodouglas.netlify.app/",
+        "src": "/portfolio-game.png",
+        "title": "Gamefield Portfolio",
+        "description":
+          "My personal portfolio, in a gamified form...",
+        "tags": ["portfolio", "game", "HTML", "JavaScript", "simulation", "animations", "gsap.js", "Howler.js"],
+        "technology": "JavaScript"
+      },
+      {
+        "link": "https://medium.com/@douglasbrian2011/web-scraping-com-python-424aaaefa1ca",
+        "src": "/webscraping.png",
+        "title": "Web Scraping",
+        "description":
+          "An introduction to web scraping using python...",
+        "tags": ["web scraping", "Python", "data extraction", "data"],
+        "technology": "Python"
+      },
+      {
+        "link": "https://medium.com/@douglasbrian2011/criando-uma-simula%C3%A7%C3%A3o-do-sistema-solar-em-python-com-pygame-1fbf647db63c",
+        "src": "/sistemasolar.webp",
+        "title": "Solar System with Python",
+        "description":
+          "a simulation of the solar system...",
+        "tags": ["simulation", "solar system", "Python", "Pygame", "physics"],
+        "technology": "Python"
+      },
+      {
+        "link": "",
+        "src": "/gbaserver.png",
+        "title": "GBA Emulator",
+        "description":
+          "A GBA simulator using html and javascript...",
+        "tags": ["emulator", "GBA", "JavaScript", "ArrayBuffer", "simulation", "game"],
+        "technology": "JavaScript"
+      }
+  ],
+
+  "tags": [
+    "All", "React Native", "React", "Nestjs", "AI", "Firebase", "Stripe", "Sanity", "algorithm", "game", "data", "simulation"
   ]
 }
