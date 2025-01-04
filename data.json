@@ -7,7 +7,9 @@
         "description":
           "The Mercado Bráulio e Rosa system consists of a react native application...",
         "tags": ["app", "ecommerce", "geolocation", "React Native", "Nestjs", "Next.js"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete":
+        "I developed an integrated solution for one of the most traditional markets in Sapucaia, consisting of an API in NestJS, a frontend in Vite and a mobile application in React Native. The platform was created to improve market management and offer exclusive benefits to customers. On the frontend, administrators can manage users, import product tables, update and control the catalog, send notifications, create promotions, and configure discount policies. The mobile application allows customers to check promotions, add products to the cart, scan barcodes to check prices directly in the market, receive promotion notifications, access their purchase history and use exclusive discounts. Some areas of the app are only accessible within a 50 meter radius of the market, respecting geolocation rules imposed by the customer. This solution brought greater customer engagement, digitized internal processes and highlighted the market in the region. The project was developed using NestJS, Vite, React Native, notifications with Firebase and geolocation with Expo Location. The web system is hosted on a Linux vps and the app is now available for Android on the PlayStore."
       },
       {
         "link": "https://iect-biblioteca.vercel.app/",
@@ -16,16 +18,18 @@
         "description":
           "A web system developed to manage book loans...",
         "tags": ["web", "library", "Vite", "Supabase", "authentication", "React"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "A web system developed to manage book loans from the library of the First Congregational Church of Teresópolis, the system was developed in Vite and connects with the Supabase API. The system is authenticated by Supabese, it is possible to register users, books and make loans. It also has restrictions and access levels, filters and data export functions."
       },
       {
-        "link": "",
+        "link": "https://github.com/Neves369/a-voz-de-sapucaia",
         "src": "/avozdesapucaia.webp",
         "title": "A Voz de Sapucaia",
         "description":
           "It was a conceptual app...",
         "tags": ["concept", "information", "AI", "transcription", "city council", "data", "Firebase"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "A conceptual application with the idea of ​​centralizing the city's information and providing information to the population, using React Native and Firebase, with Voz de Sapucaia you can find out what happens in Sapucaia City Council sessions, as well as the medication situation in health posts, have access to transparency reports from the executive and legislative branches. The Service consumes an API that automates the reading of session minutes with Artificial Intelligence and saves the main events in the sessions, as well as the frequency of each councilor, in the database."
       },
       {
         "link": "https://mania-de-moda.vercel.app/",
@@ -33,8 +37,9 @@
         "title": "Mania de Moda",
         "description":
           "Mania de Moda is an online clothing store...",
-        "tags": ["ecommerce", "fashion", "virtual showcase", "WhatsApp sales", "Sanity", "Stripe", "React"],
-        "technology": "JavaScript"
+        "tags": ["ecommerce", "fashion", "WhatsApp sales", "Sanity", "Stripe", "React"],
+        "technology": "JavaScript",
+        "descriptionComplete": "An E-commerce developed for the Mania de Moda store, the front was developed in Nextjs, using the Sanity platform to host products and Stripe for payments, there is the option to purchase via Whatsapp as well, it is possible for the administrator to register promotions and discounts."
       },
       {
         "link": "https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US",
@@ -43,7 +48,8 @@
         "description":
           "Clube Esperancinha was the biggest project...",
         "tags": ["app", "points system", "notifications", "React Native", "management"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "One of the biggest projects I've worked on, Clube Esperancinha is a points club project for a famous local bar, Esperancinha. The project has a web platform for managing the entire system, made in JSF, which consumes a Java API with SpringBoot and SQL. It also has two applications available for Android and IOS, one for the customer, who, when purchasing, accumulates points in the app and another for the Waiter, who carries out the checkout using a QRCode read in the customer's app. Among the main differences of the project we can list QRCode reading, optimizations in the app's storefront, the expiration of points and the push notification system."
       },
       {
         "link": "https://divine-speakers.netlify.app/",
@@ -52,7 +58,8 @@
         "description":
           "A vast library developed with React Native and Firebase...",
         "tags": ["app", "library", "React Native", "Firebase", "theology"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "Personal project of a theological library for mobile devices using React Native and Firebase. The app has several theological PDF files, as well as several mechanisms for optimizing memory and offline use. The app is currently available for Android on Google Playstore"
       },
       {
         "link": "https://senhorita.vercel.app/",
@@ -60,8 +67,9 @@
         "title": "Senhorita",
         "description":
           "Senhorita is a women's clothing store...",
-        "tags": ["ecommerce", "women's fashion", "virtual showcase", "WhatsApp sales", "Sanity", "Stripe", "React"],
-        "technology": "JavaScript"
+        "tags": ["ecommerce", "women's fashion", "WhatsApp sales", "Sanity", "Stripe", "React"],
+        "technology": "JavaScript",
+        "descriptionComplete": "A virtual storefront, with online sales via WhatsApp, developed for a local clothing store."
       },
       {
         "link": "https://ecommerce-k3a9.vercel.app/",
@@ -70,7 +78,8 @@
         "description":
           "The e-commerce application includes modern design and animations...",
         "tags": ["ecommerce", "Stripe", "Sanity", "React", "cart", "checkout"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "My First eccommerce template, using nextjs, with elegant design and several animations, in addition to using Sanity and Stripe."
       },
       {
         "link": "https://comparadorgenoma.netlify.app/",
@@ -79,7 +88,8 @@
         "description":
           "Algorithm in Python that receives two chains of nitrogenous bases...",
         "tags": ["algorithm", "genetics", "Python", "matplotlib", "inquirer", "data"],
-        "technology": "Python"
+        "technology": "Python",
+        "descriptionComplete": "Algorithm in Python that receives two chains of nitrogenous bases, assembles the nucleotides and generates a visual comparison between them."
       },
       {
         "link": "",
@@ -87,7 +97,7 @@
         "title": "Vacation Management System",
         "description":
           "Vacation management system developed in React CLI...",
-        "tags": ["vacation management", "React", "UI", "Emotion", "Material UI", "Fullcalendar", "Formik", "Yup"],
+        "tags": ["React", "UI", "Emotion", "Material UI", "Fullcalendar", "Formik", "Yup"],
         "technology": "Javascript"
 
       },
@@ -98,7 +108,8 @@
         "description":
           "Litterae is a template for a free ebook reading application...",
         "tags": ["app", "books", "React Native", "MongoDB", "AWS"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "Litterae is a template for a free ebook reading application, with most of the resources that Google Books has, but it would aim to make a vast collection of public domain works available"
       },
       {
         "link": "https://portifoliodouglas.netlify.app/",
@@ -106,8 +117,9 @@
         "title": "Gamefield Portfolio",
         "description":
           "My personal portfolio, in a gamified form...",
-        "tags": ["portfolio", "game", "HTML", "JavaScript", "simulation", "animations", "gsap.js", "Howler.js"],
-        "technology": "JavaScript"
+        "tags": ["game", "HTML", "JavaScript", "simulation", "animations", "gsap.js", "Howler.js"],
+        "technology": "JavaScript",
+        "descriptionComplete": "My personal portfolio made in a gamified way and entirely built with Javascript."
       },
       {
         "link": "https://medium.com/@douglasbrian2011/web-scraping-com-python-424aaaefa1ca",
@@ -116,7 +128,8 @@
         "description":
           "An introduction to web scraping using python...",
         "tags": ["web scraping", "Python", "data extraction", "data"],
-        "technology": "Python"
+        "technology": "Python",
+        "descriptionComplete": "Introductory example of Web Scraping using Python, beautifulsoup4 and pandas, the idea is to have a reading of the watercourses in the Piabinha region in the mountainous region of Rio de Janeiro."
       },
       {
         "link": "https://medium.com/@douglasbrian2011/criando-uma-simula%C3%A7%C3%A3o-do-sistema-solar-em-python-com-pygame-1fbf647db63c",
@@ -125,16 +138,18 @@
         "description":
           "a simulation of the solar system...",
         "tags": ["simulation", "solar system", "Python", "Pygame", "physics"],
-        "technology": "Python"
+        "technology": "Python",
+        "descriptionComplete": "A simulation of the solar system that shows the movement of the planets around the Sun. Using Pygame, a powerful library for creating 2D graphics in Python, and applying physics principles to define the planets' orbits."
       },
       {
-        "link": "",
+        "link": "https://github.com/Neves369/gba-server",
         "src": "/gbaserver.png",
         "title": "GBA Emulator",
         "description":
           "A GBA simulator using html and javascript...",
         "tags": ["emulator", "GBA", "JavaScript", "ArrayBuffer", "simulation", "game"],
-        "technology": "JavaScript"
+        "technology": "JavaScript",
+        "descriptionComplete": "A GBA emulator using Javascript, CSS, HTML and a GBA bios."
       }
   ],
 

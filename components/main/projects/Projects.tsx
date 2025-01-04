@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import data from "../../../data.json";
-import ProjectCard from "../../sub/ProjectCard";
+import ProjectCard, { ProjectCardModal } from "../../sub/ProjectCard";
 import ProductModal from "./modal/ProjectModal";
 
 interface Props {
@@ -10,7 +10,8 @@ interface Props {
 }
 
 const ProjectsList = ({ themed, type, language }: Props) => {
-  const [selectProject, setSelectProject] = useState({});
+  const [visible, setVisible] = useState(false);
+  const [selectProject, setSelectProject] = useState<any>();
 
   const filterProjects = () => {
     return data.projetos.filter((project) => {
@@ -22,24 +23,45 @@ const ProjectsList = ({ themed, type, language }: Props) => {
     });
   };
 
+  const changeProject = (project: any) => {
+    setSelectProject(project);
+    setVisible(true);
+  };
+
+  const closeModal = () => {
+    setVisible(false);
+    setSelectProject(undefined);
+  };
+
   const filteredProjects = filterProjects();
 
   return (
-    <div className="flex flex-col pb-10 z-[20]" id="my-projects">
+    <div
+      className="overflow-hidden flex flex-col pb-10 z-[20]"
+      id="my-projects"
+    >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10">
         {filteredProjects.map((project, index) => (
-          <ProjectCard
+          <ProjectCardModal
             key={index}
             themed={themed}
-            link={project.link}
+            action={() => changeProject(project)}
             src={project.src}
             title={project.title}
             description={project.description}
           />
         ))}
       </div>
-      <ProductModal isOpen={false} onClose={""} title="My Modal">
-        <p>This is the content of the modal!</p>
+      <ProductModal
+        themed={themed}
+        isOpen={visible}
+        onClose={closeModal}
+        title={selectProject?.title}
+        image={selectProject?.src}
+        tags={selectProject?.tags}
+        link={selectProject?.link}
+      >
+        <p>{selectProject?.descriptionComplete}</p>
       </ProductModal>
     </div>
   );

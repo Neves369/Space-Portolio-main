@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../sub/ProjectCard";
 import { slideInFromLeft } from "@/utils/motion";
+import data from "../../data.json";
 
 interface Props {
   themed: string;
@@ -26,31 +27,31 @@ const Projects = ({ themed }: Props) => {
         <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
           <ProjectCard
             themed={themed}
-            link="https://mania-de-moda.vercel.app/"
-            src="/mania-moda.webp"
-            title="Mania de Moda"
-            description="Mania de Moda is an online clothing store. The website works as a virtual showcase and sales are closed via WhatsApp."
+            link={data.projetos[0].link}
+            src={data.projetos[0].src}
+            title={data.projetos[0].title}
+            description={data.projetos[0].description}
+          />
+           <ProjectCard
+            themed={themed}
+            link={data.projetos[1].link}
+            src={data.projetos[1].src}
+            title={data.projetos[1].title}
+            description={data.projetos[1].description}
           />
           <ProjectCard
             themed={themed}
-            link="https://play.google.com/store/apps/details?id=br.com.ztitecnologia.clubesperancinha&hl=pt&gl=US"
-            src="/esperancinha.webp"
-            title="Clube Esperancinha"
-            description="Clube Esperancinha was the biggest project I've ever worked on. The points club system has an app with a store for exchanging gifts, activating promotions, notifications, controlling expenses and checkout. In addition to a web page for managing the app and an auxiliary app for the waiter."
+            link={data.projetos[2].link}
+            src={data.projetos[2].src}
+            title={data.projetos[2].title}
+            description={data.projetos[2].description}
           />
           <ProjectCard
             themed={themed}
-            link="https://divine-speakers.netlify.app/"
-            src="/divspeak.webp"
-            title="Divine Speakers"
-            description="A vast library developed with React Native and Firebase, featuring several books, theological sermons, personalities and events that marked the history of the church."
-          />
-          <ProjectCard
-            themed={themed}
-            link="https://portifoliodouglas.netlify.app/"
-            src="/portfolio-game.png"
-            title="Gamefield Portfolio"
-            description="My personal portfolio, in a gamified form, developed in HTML, Javascript and CSS, relying only on gsap.js for the animations and Howeler.js for the audio part, challenging myself to use pure javascript for its development."
+            link={data.projetos[3].link}
+            src={data.projetos[3].src}
+            title={data.projetos[3].title}
+            description={data.projetos[3].description}
           />
         </div>
         {/* <br />
