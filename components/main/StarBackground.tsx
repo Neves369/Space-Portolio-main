@@ -8,7 +8,7 @@ import * as random from "maath/random/dist/maath-random.esm";
 import ThemeContext from "@/context/theme";
 
 const StarBackground = (props: any) => {
-  const ref: any = useRef();
+  const ref: any = useRef(null);
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );
@@ -34,7 +34,7 @@ const StarBackground = (props: any) => {
             color="black"
             size={0.002}
             sizeAttenuation={true}
-            dethWrite={false}
+            depthWrite={false}
           />
         </Points>
       </group>
@@ -56,7 +56,7 @@ const StarBackground = (props: any) => {
             color="white"
             size={0.002}
             sizeAttenuation={true}
-            dethWrite={false}
+            depthWrite={false}
           />
         </Points>
       </group>
