@@ -8,11 +8,18 @@ interface Props {
 const Hero = ({ themed }: Props) => {
   if (themed === "light") {
     return (
-      <div className="relative flex flex-col h-full w-full ai" id="about-me">
-        <div className="sun">
-          <div className="black-hole"></div>
-          <div className="rays"></div>
-        </div>
+      <div className="relative flex flex-col h-full w-full" id="about-me">
+        <Suspense fallback={<div>Carregando vídeo...</div>}>
+          <video
+            key={`video-${themed}`}
+            autoPlay
+            muted
+            loop
+            className="rotate-180 absolute top-[-540px] sm:top-[-340px]  h-full w-full left-0 z-[1] object-contain "
+          >
+            <source src={"/blackhole-white.mp4"} type="video/webm" />
+          </video>
+        </Suspense>
         <HeroContent />
       </div>
     );
@@ -22,6 +29,7 @@ const Hero = ({ themed }: Props) => {
       <div className="relative flex flex-col h-full w-full" id="about-me">
         <Suspense fallback={<div>Carregando vídeo...</div>}>
           <video
+            key={`video-${themed}`}
             autoPlay
             muted
             loop
