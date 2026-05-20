@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
@@ -33,7 +34,10 @@ const Encryption = ({ themed }: Props) => {
       </div>
 
       <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
+        <Link
+          href="/security"
+          className="flex flex-col items-center group cursor-pointer w-auto h-auto"
+        >
           <Image
             src={themed === "light" ? "/LockTop2.png" : "/LockTop.png"}
             alt="Lock top"
@@ -48,7 +52,7 @@ const Encryption = ({ themed }: Props) => {
             height={70}
             className=" z-10"
           />
-        </div>
+        </Link>
 
         <div
           className={`Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] ${
