@@ -8,12 +8,16 @@ const ProjectsFilter = ({
   language,
   setType,
   setLanguage,
+  sortOrder,
+  setSortOrder,
 }: any) => {
   const [isTypeOpen, setIsTypeOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
 
   const typeRef = useRef<any>(null);
   const languageRef = useRef<any>(null);
+  const sortRef = useRef<any>(null);
 
   // Função para fechar menus ao clicar fora deles
   useEffect(() => {
@@ -23,6 +27,9 @@ const ProjectsFilter = ({
       }
       if (languageRef.current && !languageRef.current.contains(event.target)) {
         setIsLanguageOpen(false);
+      }
+      if (sortRef.current && !sortRef.current.contains(event.target)) {
+        setIsSortOpen(false);
       }
     };
 
@@ -91,6 +98,41 @@ const ProjectsFilter = ({
                   className="px-4 py-2 cursor-pointer hover:bg-gray-100"
                 >
                   {lang}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      {/* Ordenar por data */}
+      <div className="relative" ref={sortRef}>
+        <button
+          onClick={() => setIsSortOpen(!isSortOpen)}
+          className={`px-4 py-2 rounded-lg border focus:outline-none bg-transparent ${
+            themed === "light"
+              ? "bg-[#03001402] text-gray-600 border-[#ff6501]"
+              : "bg-[#0300145e] text-gray-200 border-[#7042f861]"
+          }`}
+        >
+          {sortOrder === "desc" ? "Mais recentes" : "Mais antigas"}
+        </button>
+        {isSortOpen && (
+          <div className="absolute top-full left-0 mt-2 w-44 bg-white border rounded-lg shadow-lg z-10">
+            <ul>
+              {[
+                { label: "Mais recentes", value: "desc" },
+                { label: "Mais antigas", value: "asc" },
+              ].map((option) => (
+                <li
+                  key={option.value}
+                  onClick={() => {
+                    setSortOrder(option.value);
+                    setIsSortOpen(false);
+                  }}
+                  className="px-4 py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  {option.label}
                 </li>
               ))}
             </ul>

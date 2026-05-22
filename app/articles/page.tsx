@@ -4,10 +4,9 @@ import Footer from "@/components/main/Footer";
 import ThemeContext from "../../context/theme";
 import { slideInFromLeft } from "@/utils/motion";
 import React, { useContext, useState } from "react";
-import ProjectsList from "@/components/main/projects/Projects";
-import ProjectsFilter from "@/components/main/projects/Filters";
+import ArticlesList from "@/components/main/articles/Articles";
 
-const Projects = () => {
+const Articles = () => {
   const { themed } = useContext(ThemeContext);
   const [type, setType] = useState("All");
   const [language, setLanguage] = useState("All");
@@ -33,44 +32,35 @@ const Projects = () => {
                 }`}
               >
                 {" "}
-                Projects
-              </span>
-            </span>
-
-            <span className="block sm:hidden text-5xl">
-              Douglas
-              <span
-                className={`text-transparent bg-clip-text bg-gradient-to-r ${
-                  themed === "light"
-                    ? "from-orange-500 to-yellow-300"
-                    : "from-purple-500 to-cyan-500"
-                }`}
-              >
-                {" "}
-                Neves
+                Articles
               </span>
             </span>
           </motion.div>
-          <ProjectsFilter
-            themed={themed}
-            type={type}
-            language={language}
-            setType={setType}
-            setLanguage={setLanguage}
-            sortOrder={sortOrder}
-            setSortOrder={setSortOrder}
-          />
+          <div className="flex items-center gap-3 ml-auto mt-4 sm:mt-0">
+            <span
+              className={`text-sm font-medium ${themed === "light" ? "text-gray-600" : "text-gray-300"}`}
+            >
+              Ordenar por:
+            </span>
+            <select
+              value={sortOrder}
+              onChange={(event) => setSortOrder(event.target.value)}
+              className={`rounded-lg border px-3 py-2 text-sm focus:outline-none ${
+                themed === "light"
+                  ? "border-[#ff6501] bg-white text-gray-700"
+                  : "border-[#7042f861] bg-[#1f043d] text-gray-200"
+              }`}
+            >
+              <option value="desc">Mais recentes</option>
+              <option value="asc">Mais antigas</option>
+            </select>
+          </div>
         </div>
-        <ProjectsList
-          themed={themed}
-          type={type}
-          language={language}
-          sortOrder={sortOrder}
-        />
+        <ArticlesList themed={themed} sortOrder={sortOrder} />
         <Footer themed={themed} />
       </div>
     </main>
   );
 };
 
-export default Projects;
+export default Articles;

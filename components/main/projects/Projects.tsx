@@ -1,39 +1,76 @@
-import React, { useState } from "react";
-import data from "../../../data.json";
+import React, { useEffect, useState } from "react";
 import ProjectCard, { ProjectCardModal } from "../../sub/ProjectCard";
 import ProductModal from "./modal/ProjectModal";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 interface Props {
   themed: string;
   type: string;
   language: string;
+  sortOrder?: string;
 }
 
-const ProjectsList = ({ themed, type, language }: Props) => {
+const ProjectsList = ({
+  themed,
+  type,
+  language,
+  sortOrder = "desc",
+}: Props) => {
   const [visible, setVisible] = useState(false);
-  const [selectProject, setSelectProject] = useState<any>();
+  const [selectedProject, setSelectedProject] = useState<any>();
+  const [projects, setProjects] = useState<any[]>([]);
+
+  const blockToText = (blocks: any) => {
+    if (!blocks) return "";
+    if (typeof blocks === "string") return blocks;
+    return blocks
+      .map((block: any) =>
+        (block.children || []).map((child: any) => child.text || "").join(""),
+      )
+      .join("\n\n");
+  };
 
   const filterProjects = () => {
-    return data.projetos.filter((project) => {
+    return projects.filter((project) => {
+      const projTags: string[] = project.tags || [];
       const matchesLanguage =
-        language === "All" || project.technology === language;
-      const matchesType = type === "All" || project.tags.includes(type);
+        language === "All" ||
+        projTags.includes(language) ||
+        project.projectType === language;
+      const matchesType =
+        type === "All" ||
+        projTags.includes(type) ||
+        project.projectType === type;
 
       return matchesLanguage && matchesType;
     });
   };
 
   const changeProject = (project: any) => {
-    setSelectProject(project);
+    setSelectedProject(project);
     setVisible(true);
   };
 
   const closeModal = () => {
     setVisible(false);
-    setSelectProject(undefined);
+    setSelectedProject(undefined);
   };
 
   const filteredProjects = filterProjects();
+
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    const aDate = a?.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+    const bDate = b?.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+    return sortOrder === "asc" ? aDate - bDate : bDate - aDate;
+  });
+
+  useEffect(() => {
+    const q = `*[_type == "project"]{title, summary, description, mainImage, gallery, tags, projectType, links, slug, publishedAt}`;
+    client.fetch(q).then((res) => {
+      setProjects(res || []);
+    });
+  }, []);
 
   return (
     <div
@@ -41,28 +78,50 @@ const ProjectsList = ({ themed, type, language }: Props) => {
       id="my-projects"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10">
-        {filteredProjects.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <ProjectCardModal
             key={index}
             themed={themed}
             action={() => changeProject(project)}
-            src={project.src}
+            src={
+              project.mainImage
+                ? urlFor(project.mainImage).width(1200).url()
+                : project.src
+            }
             title={project.title}
-            description={project.description}
+            description={
+              project.summary ||
+              blockToText(project.description) ||
+              "No summary available."
+            }
           />
         ))}
       </div>
+
       <ProductModal
         themed={themed}
         isOpen={visible}
         onClose={closeModal}
-        title={selectProject?.title}
-        image={selectProject?.src}
-        tags={selectProject?.tags}
-        link={selectProject?.link}
-      >
-        <p>{selectProject?.descriptionComplete}</p>
-      </ProductModal>
+        title={selectedProject?.title}
+        image={
+          selectedProject?.mainImage
+            ? urlFor(selectedProject.mainImage).width(1200).url()
+            : selectedProject?.src
+        }
+        gallery={selectedProject?.gallery}
+        tags={selectedProject?.tags || []}
+        link={
+          selectedProject?.links?.live ||
+          selectedProject?.links?.github ||
+          selectedProject?.link
+        }
+        summary={selectedProject?.summary}
+        description={blockToText(selectedProject?.description)}
+        projectType={selectedProject?.projectType}
+        publishedAt={selectedProject?.publishedAt}
+        githubLink={selectedProject?.links?.github}
+        liveLink={selectedProject?.links?.live}
+      />
     </div>
   );
 };

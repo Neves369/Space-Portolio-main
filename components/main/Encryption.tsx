@@ -85,7 +85,7 @@ const Encryption = ({ themed }: Props) => {
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          className="w-full h-auto opacity-25"
           src={themed === "light" ? "/encryption2.webm/" : "/encryption.webm/"}
         />
       </div>

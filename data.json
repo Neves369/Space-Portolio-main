@@ -110,46 +110,6 @@
         "tags": ["app", "books", "React Native", "MongoDB", "AWS"],
         "technology": "JavaScript",
         "descriptionComplete": "Litterae is a template for a free ebook reading application, with most of the resources that Google Books has, but it would aim to make a vast collection of public domain works available"
-      },
-      {
-        "link": "https://portifoliodouglas.netlify.app/",
-        "src": "/portfolio-game.png",
-        "title": "Gamefield Portfolio",
-        "description":
-          "My personal portfolio, in a gamified form...",
-        "tags": ["game", "HTML", "JavaScript", "simulation", "animations", "gsap.js", "Howler.js"],
-        "technology": "JavaScript",
-        "descriptionComplete": "My personal portfolio made in a gamified way and entirely built with Javascript."
-      },
-      {
-        "link": "https://medium.com/@douglasbrian2011/web-scraping-com-python-424aaaefa1ca",
-        "src": "/webscraping.png",
-        "title": "Web Scraping",
-        "description":
-          "An introduction to web scraping using python...",
-        "tags": ["web scraping", "Python", "data extraction", "data"],
-        "technology": "Python",
-        "descriptionComplete": "Introductory example of Web Scraping using Python, beautifulsoup4 and pandas, the idea is to have a reading of the watercourses in the Piabinha region in the mountainous region of Rio de Janeiro."
-      },
-      {
-        "link": "https://medium.com/@douglasbrian2011/criando-uma-simula%C3%A7%C3%A3o-do-sistema-solar-em-python-com-pygame-1fbf647db63c",
-        "src": "/sistemasolar.webp",
-        "title": "Solar System with Python",
-        "description":
-          "a simulation of the solar system...",
-        "tags": ["simulation", "solar system", "Python", "Pygame", "physics"],
-        "technology": "Python",
-        "descriptionComplete": "A simulation of the solar system that shows the movement of the planets around the Sun. Using Pygame, a powerful library for creating 2D graphics in Python, and applying physics principles to define the planets' orbits."
-      },
-      {
-        "link": "https://github.com/Neves369/gba-server",
-        "src": "/gbaserver.png",
-        "title": "GBA Emulator",
-        "description":
-          "A GBA simulator using html and javascript...",
-        "tags": ["emulator", "GBA", "JavaScript", "ArrayBuffer", "simulation", "game"],
-        "technology": "JavaScript",
-        "descriptionComplete": "A GBA emulator using Javascript, CSS, HTML and a GBA bios."
       }
   ],
 

@@ -32,7 +32,7 @@ const Projects = ({ themed }: Props) => {
             title={data.projetos[0].title}
             description={data.projetos[0].description}
           />
-           <ProjectCard
+          <ProjectCard
             themed={themed}
             link={data.projetos[1].link}
             src={data.projetos[1].src}
