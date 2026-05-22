@@ -95,7 +95,7 @@ const HeroContent = () => {
       >
         <Image
           className="hidden sm:block"
-          src={themed === "light" ? "/mainIcons.png" : "/mainIconsdark.svg"}
+          src={themed === "light" ? "/assets/icons/mainIcons.png" : "/assets/icons/mainIconsdark.svg"}
           alt="work icons"
           height={650}
           width={650}
@@ -106,3 +106,4 @@ const HeroContent = () => {
 };
 
 export default HeroContent;
+

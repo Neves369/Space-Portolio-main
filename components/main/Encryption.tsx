@@ -39,14 +39,14 @@ const Encryption = ({ themed }: Props) => {
           className="flex flex-col items-center group cursor-pointer w-auto h-auto"
         >
           <Image
-            src={themed === "light" ? "/LockTop2.png" : "/LockTop.png"}
+            src={themed === "light" ? "/assets/icons/LockTop2.png" : "/assets/icons/LockTop.png"}
             alt="Lock top"
             width={50}
             height={50}
             className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
           />
           <Image
-            src={themed === "light" ? "/LockMain2.png" : "/LockMain.png"}
+            src={themed === "light" ? "/assets/icons/LockMain2.png" : "/assets/icons/LockMain.png"}
             alt="Lock Main"
             width={70}
             height={70}
@@ -86,7 +86,7 @@ const Encryption = ({ themed }: Props) => {
           playsInline
           preload="false"
           className="w-full h-auto opacity-25"
-          src={themed === "light" ? "/encryption2.webm/" : "/encryption.webm/"}
+          src={themed === "light" ? "/assets/media/encryption2.webm" : "/assets/media/encryption.webm"}
         />
       </div>
     </div>
@@ -94,3 +94,4 @@ const Encryption = ({ themed }: Props) => {
 };
 
 export default Encryption;
+

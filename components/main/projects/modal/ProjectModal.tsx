@@ -90,7 +90,7 @@ const ProductModal = ({
             <div className="flex flex-col min-h-[320px] lg:min-h-full">
               <div className="relative flex-1 overflow-hidden rounded-3xl">
                 <Image
-                  src={galleryUrls[activeIndex] || image || "/placeholder.png"}
+                  src={galleryUrls[activeIndex] || image || "/assets/images/placeholder.png"}
                   alt={title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -228,3 +228,4 @@ const ProductModal = ({
 };
 
 export default memo(ProductModal);
+

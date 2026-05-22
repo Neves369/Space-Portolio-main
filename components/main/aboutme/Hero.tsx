@@ -1,17 +1,18 @@
+import { useContext } from "react";
 import { motion } from "framer-motion";
-import React, { useContext } from "react";
 import {
   slideInFromLeft,
-  slideInFromRight,
   slideInFromTop,
+  slideInFromRight,
 } from "@/utils/motion";
+import Image from "next/image";
 import ThemeContext from "@/context/theme";
 import { SparklesIcon } from "@heroicons/react/20/solid";
-import Image from "next/image";
 
 const Hero = () => {
   const { themed } = useContext(ThemeContext);
   return (
+
     <div className="relative flex flex-col h-full w-full" id="about-me">
       <motion.div
         initial="hidden"
@@ -85,7 +86,7 @@ const Hero = () => {
         <div className="w-full h-full flex justify-center items-center">
           <Image
             className="hidden sm:block"
-            src={themed === "light" ? "/euWhite.webp" : "/eu.webp"}
+            src={themed === "light" ? "/assets/images/euWhite.webp" : "/assets/images/eu.webp"}
             alt="work icons"
             height={650}
             width={650}
@@ -99,3 +100,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

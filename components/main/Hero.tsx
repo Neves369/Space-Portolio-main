@@ -17,7 +17,7 @@ const Hero = ({ themed }: Props) => {
             loop
             className="rotate-180 absolute top-[-540px] sm:top-[-340px]  h-full w-full left-0 z-[1] object-contain "
           >
-            <source src={"/blackhole-white.mp4"} type="video/webm" />
+            <source src="/assets/media/blackhole-white.mp4" type="video/webm" />
           </video>
         </Suspense>
         <HeroContent />
@@ -35,7 +35,7 @@ const Hero = ({ themed }: Props) => {
             loop
             className="rotate-180 absolute top-[-540px] sm:top-[-340px]  h-full w-full left-0 z-[1] object-contain "
           >
-            <source src={"/blackhole.webm"} type="video/webm" />
+            <source src="/assets/media/blackhole.webm" type="video/webm" />
           </video>
         </Suspense>
         <HeroContent />
@@ -45,3 +45,4 @@ const Hero = ({ themed }: Props) => {
 };
 
 export default Hero;
+

@@ -126,3 +126,4 @@ const Skills = ({ themed }: Props) => {
 };
 
 export default Skills;
+

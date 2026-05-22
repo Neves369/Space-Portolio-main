@@ -20,7 +20,7 @@ const Navbar = () => {
           className="absolute left-0 sm:relative sm:flex h-auto w-auto flex-row items-center"
         >
           <Image
-            src={themed === "light" ? "/NavLogo2.png" : "/NavLogo.png"}
+            src={themed === "light" ? "/assets/icons/NavLogo2.png" : "/assets/icons/NavLogo.png"}
             alt="logo"
             width={70}
             height={70}
@@ -142,3 +142,4 @@ const Navbar = () => {
 };
 
 export default memo(Navbar);
+
