@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
+import React, { memo, useEffect, useMemo, useState } from "react";
 
 const ProductModal = ({
   isOpen,
@@ -87,10 +87,14 @@ const ProductModal = ({
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 bg-transparent">
-            <div className="flex flex-col min-h-[320px] lg:min-h-full p-6">
-              <div className="relative flex-1 overflow-hidden rounded-3xl">
+            <div className="flex flex-col min-h-[320px] lg:min-h p-6">
+              <div className="relative h-[400px] overflow-hidden rounded-3xl">
                 <Image
-                  src={galleryUrls[activeIndex] || image || "/assets/images/placeholder.png"}
+                  src={
+                    galleryUrls[activeIndex] ||
+                    image ||
+                    "/assets/images/placeholder.png"
+                  }
                   alt={title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -228,4 +232,3 @@ const ProductModal = ({
 };
 
 export default memo(ProductModal);
-

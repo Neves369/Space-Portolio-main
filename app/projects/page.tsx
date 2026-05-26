@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
     <main className="h-full w-full">
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20 min-h-170">
         <div className="h-full w-full flex flex-rol px-10 mt-20 gap-5 m-auto text-start">
           <motion.div
             variants={slideInFromLeft(0.5)}
