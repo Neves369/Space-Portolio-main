@@ -15,5 +15,9 @@ export const dynamic = 'force-static'
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return (
+    <div className="relative z-[99999] min-h-screen">
+      <NextStudio config={config} />
+    </div>
+  )
 }
