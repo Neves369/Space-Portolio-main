@@ -57,8 +57,8 @@ const Articles = () => {
           </div>
         </div>
         <ArticlesList themed={themed} sortOrder={sortOrder} />
-        <Footer themed={themed} />
       </div>
+      <Footer themed={themed} />
     </main>
   );
 };

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ArticleCard from "@/components/sub/ArticleCard";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { useLoading } from "@/context/loading";
 
 interface Props {
   themed: string;
@@ -12,10 +13,17 @@ interface Props {
 const ArticlesList = ({ themed, sortOrder }: Props) => {
   const [articles, setArticles] = useState<any[]>([]);
 
+  const { startLoading, stopLoading } = useLoading();
+
   useEffect(() => {
     const q = `*[_type == "mediumArticle"]{title, excerpt, coverImage, url, publishedAt, topics}`;
-    client.fetch(q).then((res) => setArticles(res || []));
-  }, []);
+    startLoading();
+    client
+      .fetch(q)
+      .then((res) => setArticles(res || []))
+      .catch(() => setArticles([]))
+      .finally(() => stopLoading());
+  }, [startLoading, stopLoading]);
 
   const sortedArticles = [...articles].sort((a, b) => {
     const aDate = a?.publishedAt ? new Date(a.publishedAt).getTime() : 0;

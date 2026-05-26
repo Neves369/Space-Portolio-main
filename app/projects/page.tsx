@@ -67,8 +67,8 @@ const Projects = () => {
           language={language}
           sortOrder={sortOrder}
         />
-        <Footer themed={themed} />
       </div>
+      <Footer themed={themed} />
     </main>
   );
 };

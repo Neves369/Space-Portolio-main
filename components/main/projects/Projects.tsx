@@ -3,6 +3,7 @@ import ProjectCard, { ProjectCardModal } from "../../sub/ProjectCard";
 import ProductModal from "./modal/ProjectModal";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { useLoading } from "@/context/loading";
 
 interface Props {
   themed: string;
@@ -65,12 +66,19 @@ const ProjectsList = ({
     return sortOrder === "asc" ? aDate - bDate : bDate - aDate;
   });
 
+  const { startLoading, stopLoading } = useLoading();
+
   useEffect(() => {
     const q = `*[_type == "project"]{title, summary, description, mainImage, gallery, tags, projectType, links, slug, publishedAt}`;
-    client.fetch(q).then((res) => {
-      setProjects(res || []);
-    });
-  }, []);
+    startLoading();
+    client
+      .fetch(q)
+      .then((res) => {
+        setProjects(res || []);
+      })
+      .catch(() => setProjects([]))
+      .finally(() => stopLoading());
+  }, [startLoading, stopLoading]);
 
   return (
     <div

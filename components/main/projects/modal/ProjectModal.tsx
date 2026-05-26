@@ -71,13 +71,13 @@ const ProductModal = ({
   return (
     <>
       <div
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 10 }}
         className={`fixed inset-0  bg-opacity-10 backdrop-blur-xl`}
       />
 
       <div
         onClick={onClose}
-        style={{ zIndex: 10 }}
+        style={{ zIndex: 11 }}
         className="fixed inset-0 flex items-center justify-center px-4 sm:px-6 py-10"
       >
         <div
@@ -87,7 +87,7 @@ const ProductModal = ({
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 bg-transparent">
-            <div className="flex flex-col min-h-[320px] lg:min-h-full">
+            <div className="flex flex-col min-h-[320px] lg:min-h-full p-6">
               <div className="relative flex-1 overflow-hidden rounded-3xl">
                 <Image
                   src={galleryUrls[activeIndex] || image || "/assets/images/placeholder.png"}
@@ -152,7 +152,7 @@ const ProductModal = ({
                         : "bg-violet-800 text-white hover:bg-violet-700"
                     }`}
                   >
-                    Fechar
+                    Close
                   </button>
                 </div>
 
@@ -177,7 +177,7 @@ const ProductModal = ({
                 <div className="grid gap-3 sm:grid-cols-2">
                   <div className="rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
                     <p className="text-xs uppercase text-slate-400">
-                      Tecnologias
+                      Technologies
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {tags.map((tag: string, index: number) => (
@@ -195,7 +195,7 @@ const ProductModal = ({
                     </div>
                   </div>
                   <div className="rounded-3xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
-                    <p className="text-xs uppercase text-slate-400">Ações</p>
+                    <p className="text-xs uppercase text-slate-400">Actions</p>
                     <div className="mt-3 flex flex-wrap gap-3">
                       {liveLink && (
                         <button
@@ -203,7 +203,7 @@ const ProductModal = ({
                           onClick={() => openLink(liveLink)}
                           className="inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
                         >
-                          Ver ao vivo
+                          Live
                         </button>
                       )}
                       {githubLink && (
@@ -212,7 +212,7 @@ const ProductModal = ({
                           onClick={() => openLink(githubLink)}
                           className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-100"
                         >
-                          Repositório
+                          Repository
                         </button>
                       )}
                     </div>
