@@ -115,7 +115,9 @@ const Skills = ({ themed }: Props) => {
               muted
               autoPlay
               src={
-                themed === "light" ? "/cards-video2.webm" : "/cards-video.webm"
+                themed === "light"
+                  ? "/media/cards-video2.webm"
+                  : "/media/cards-video.webm"
               }
             />
           </Suspense>
@@ -126,4 +128,3 @@ const Skills = ({ themed }: Props) => {
 };
 
 export default Skills;
-
