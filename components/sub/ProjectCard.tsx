@@ -75,7 +75,7 @@ export const ProjectCardModal = ({
           : "border-violet-700 bg-slate-950"
       }`}
     >
-      <div className="relative h-46 w-full overflow-hidden opacity-50">
+      <div className="relative h-46 w-full overflow-hidden opacity-75">
         <Image
           src={src}
           alt={title}
