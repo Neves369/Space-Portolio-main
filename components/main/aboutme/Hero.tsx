@@ -22,19 +22,16 @@ const Hero = () => {
         <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
           <motion.div
             variants={slideInFromTop}
-            className={`Welcome-box py-[4px] px-[7px] border ${
-              themed === "light" ? "border-[#ff6501]" : "border-[#7042f88b]"
-            } opacity-[0.9]`}
+            className={`Welcome-box py-[4px] px-[7px] border ${themed === "light" ? "border-[#ff6501]" : "border-[#7042f88b]"
+              } opacity-[0.9]`}
           >
             <SparklesIcon
-              className={`${
-                themed === "light" ? "text-[#fea200]" : "text-[#b49bff]"
-              } mr-[10px] h-5 w-5`}
+              className={`${themed === "light" ? "text-[#fea200]" : "text-[#b49bff]"
+                } mr-[10px] h-5 w-5`}
             />
             <h1
-              className={`text-[13px] ${
-                themed === "light" ? "Welcome-text-light" : "Welcome-text"
-              }`}
+              className={`text-[13px] ${themed === "light" ? "Welcome-text-light" : "Welcome-text"
+                }`}
             >
               About Me
             </h1>
@@ -42,18 +39,16 @@ const Hero = () => {
 
           <motion.div
             variants={slideInFromLeft(0.5)}
-            className={`flex flex-col gap-6 mt-6 text-6xl font-bold ${
-              themed === "light" ? "text-gray-700" : "text-white"
-            } max-w-[600px] w-auto h-auto`}
+            className={`flex flex-col gap-6 mt-6 text-6xl font-bold ${themed === "light" ? "text-gray-700" : "text-white"
+              } max-w-[600px] w-auto h-auto`}
           >
             <span className="hidden sm:block text-6xl">
               Douglas
               <span
-                className={`text-transparent bg-clip-text bg-gradient-to-r ${
-                  themed === "light"
+                className={`text-transparent bg-clip-text bg-gradient-to-r ${themed === "light"
                     ? "from-orange-500 to-yellow-300"
                     : "from-purple-500 to-cyan-500"
-                }`}
+                  }`}
               >
                 {" "}
                 Neves
@@ -63,11 +58,10 @@ const Hero = () => {
             <span className="block sm:hidden text-5xl">
               Douglas
               <span
-                className={`text-transparent bg-clip-text bg-gradient-to-r ${
-                  themed === "light"
+                className={`text-transparent bg-clip-text bg-gradient-to-r ${themed === "light"
                     ? "from-orange-500 to-yellow-300"
                     : "from-purple-500 to-cyan-500"
-                }`}
+                  }`}
               >
                 {" "}
                 Neves
@@ -77,9 +71,8 @@ const Hero = () => {
 
           <motion.p
             variants={slideInFromLeft(0.8)}
-            className={`text-lg ${
-              themed == "light" ? "text-gray-700" : "text-gray-400"
-            } my-5 max-w-[600px] text-start`}
+            className={`text-lg ${themed == "light" ? "text-gray-700" : "text-gray-400"
+              } my-5 max-w-[800px] text-start`}
           >
             With a Bachelor's degree in Computer Science and a career built on
             technical excellence and strategic vision, I currently serve as the
