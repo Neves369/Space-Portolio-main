@@ -88,7 +88,7 @@ const ProductModal = ({
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 bg-transparent">
             <div className="flex flex-col min-h-[320px] lg:min-h p-6">
-              <div className="relative h-[400px] overflow-hidden rounded-3xl">
+              <div className="relative h-[350px] overflow-hidden rounded-3xl">
                 <Image
                   src={
                     galleryUrls[activeIndex] ||
@@ -103,7 +103,7 @@ const ProductModal = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] opacity-90">
-                    {projectType || "Projeto"}
+                    {projectType || "Project"}
                   </p>
                   {formattedDate && (
                     <p className="mt-1 text-xs opacity-80">{formattedDate}</p>
