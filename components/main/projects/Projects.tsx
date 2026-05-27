@@ -4,6 +4,8 @@ import ProductModal from "./modal/ProjectModal";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { useLoading } from "@/context/loading";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/utils/motion";
 
 interface Props {
   themed: string;
@@ -85,26 +87,33 @@ const ProjectsList = ({
       className="overflow-hidden flex flex-col pb-10 z-[20]"
       id="my-projects"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10"
+      >
         {sortedProjects.map((project, index) => (
-          <ProjectCardModal
-            key={index}
-            themed={themed}
-            action={() => changeProject(project)}
-            src={
-              project.mainImage
-                ? urlFor(project.mainImage).width(1200).url()
-                : project.src
-            }
-            title={project.title}
-            description={
-              project.summary ||
-              blockToText(project.description) ||
-              "No summary available."
-            }
-          />
+          <motion.div key={index} variants={itemVariants}>
+            <ProjectCardModal
+              themed={themed}
+              action={() => changeProject(project)}
+              src={
+                project.mainImage
+                  ? urlFor(project.mainImage).width(1200).url()
+                  : project.src
+              }
+              title={project.title}
+              description={
+                project.summary ||
+                blockToText(project.description) ||
+                "No summary available."
+              }
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+
 
       <ProductModal
         themed={themed}

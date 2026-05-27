@@ -4,6 +4,8 @@ import ArticleCard from "@/components/sub/ArticleCard";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { useLoading } from "@/context/loading";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/utils/motion";
 
 interface Props {
   themed: string;
@@ -33,21 +35,28 @@ const ArticlesList = ({ themed, sortOrder }: Props) => {
 
   return (
     <div className="overflow-hidden flex flex-col pb-10 z-[20]" id="articles">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10"
+      >
         {sortedArticles.map((a, i) => (
-          <ArticleCard
-            key={i}
-            themed={themed}
-            url={a.url}
-            src={a.coverImage ? urlFor(a.coverImage).width(1200).url() : ""}
-            title={a.title}
-            excerpt={a.excerpt}
-            publishedAt={a.publishedAt}
-          />
+          <motion.div key={i} variants={itemVariants}>
+            <ArticleCard
+              themed={themed}
+              url={a.url}
+              src={a.coverImage ? urlFor(a.coverImage).width(1200).url() : ""}
+              title={a.title}
+              excerpt={a.excerpt}
+              publishedAt={a.publishedAt}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 export default ArticlesList;
+

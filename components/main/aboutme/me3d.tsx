@@ -1,8 +1,9 @@
 "use client";
-
+import { motion } from "framer-motion";
+import { Suspense, useRef } from "react";
+import { slideInFromTop } from "@/utils/motion";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, OrbitControls } from "@react-three/drei";
-import { Suspense, useRef } from "react";
 
 function Model() {
   const modelRef = useRef<any>(null);
@@ -21,7 +22,10 @@ function Model() {
 
 export default function Page3D() {
   return (
-    <div
+    <motion.div
+      variants={slideInFromTop}
+      initial="hidden"
+      animate="visible"
       style={{
         width: 650,
         height: 650,
@@ -44,6 +48,6 @@ export default function Page3D() {
           enablePan={false}
         />
       </Canvas>
-    </div>
+    </motion.div>
   );
 }

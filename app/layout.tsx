@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/main/Navbar";
 import StarsCanvas from "@/components/main/StarBackground";
 import LoadingIndicator from "@/components/ui/LoadingIndicator";
+import BackgroundVideo from "@/components/main/BackgroundVideo";
 import { ThemeProvider } from "@/context/theme";
 import { LoadingProvider } from "@/context/loading";
 
@@ -25,12 +26,13 @@ export default function RootLayout({
       <html lang="en">
         <body
           id="body"
-          className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+          className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden relative`}
         >
           <LoadingProvider>
             <Navbar />
             <LoadingIndicator />
-            {children}
+            <BackgroundVideo />
+            <div className="relative z-[20]">{children}</div>
             <StarsCanvas />
           </LoadingProvider>
         </body>
@@ -38,3 +40,4 @@ export default function RootLayout({
     </ThemeProvider>
   );
 }
+
